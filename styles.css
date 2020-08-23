@@ -1,0 +1,399 @@
+html, body {
+  font-family: helvetica, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/**** animation 1 ****/
+.animations {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+}
+.animation1 {
+  width: 100%;
+  height: 100%;
+  background-color: #002572;
+}
+.animation1__img {
+  overflow: hidden;
+  position: relative;
+  height: 67%;
+}
+.animation1__img_bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.animataion1__img_person {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  animation-name: anim1ScalingImage;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear
+}
+@keyframes anim1ScalingImage {
+  from {
+    transform: translateX(-50%) scale(0.5);
+    bottom: -25%;
+  }
+  to {
+    transform: translateX(-50%) scale(0.75);
+    bottom: -12.5%;
+  }
+}
+.animation1__text {
+  position: relative;
+  height: 33%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+
+}
+
+.animation1__text_pars {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 26px;
+  color: #ffffff;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  animation-name: anim1TextComing;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding: 50px 30px 0;
+
+
+
+}
+@keyframes anim1TextComing {
+  from {
+    left: -50%;
+    height: 100%;
+  }
+  to {
+    left: 50%;
+    height: 100%;
+  }
+
+}
+
+.animtaion1__text_par1,
+.animtaion1__text_par2,
+.animtaion1__text_par3 {
+  overflow: hidden;
+  height: 31px;
+}
+.animtaion1__text_par3 {
+  animation-name: anim1Par3Going;
+  animation-duration: 0.3s;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.animtaion1__text_par2 {
+  animation-name: anim1Par2Going;
+  animation-duration: 0.3s;
+  animation-delay: 5.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.animtaion1__text_par1 {
+  animation-name: anim1Par1Going;
+  animation-duration: 0.3s;
+  animation-delay: 5.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/**** animation 2 ****/
+.anim2__img {
+  z-index: 2;
+  position: absolute;
+  /*height: 100%;*/
+  width: 100%;
+  transform: translateX(120%);
+  left: 0;
+  top: 0;
+  animation-name: anim2ImgComing;
+  animation-duration: 1.2s;
+  animation-delay: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes anim2ImgComing {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes anim1Par3Going {
+  form {
+    height: 31px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes anim1Par2Going {
+  form {
+    height: 31px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes anim1Par1Going {
+  form {
+    height: 31px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animation2__text_pars {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 26px;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -50%);
+  padding: 0 30px;
+
+  animation-name: anim2ParsComing;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes anim2ParsComing {
+  from {
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/**** animation 3 ****/
+.animation3 {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  padding: 0 25px;
+
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(100%);
+
+
+  animation-name: anime3Coming;
+  animation-duration: 1.3s;
+  animation-delay: 10s;
+  animation-iteration-count: 1;
+  transition-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.animation3__product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  transform: translateY(-360%);
+
+  animation-name: anim3ProductComing;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.animation3__logo {
+  display: block;
+  width: 100%;
+}
+.anim3__link {
+  margin-top: 20px;
+}
+
+.anim3__link > a {
+  color: #204185;
+}
+.animation3__about {
+  font-size: 8px;
+  position: absolute;
+  z-index: 6;
+  bottom: -190px;
+  left: 0;
+  padding: 0 34px;
+
+  animation-name: anim3AboutComing;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.lightblue {
+  color: #2294ff !important;
+}
+@keyframes anime3Coming {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim3AboutComing {
+  from {
+    bottom: -190px;
+  }
+  to {
+    bottom: 32px;
+  }
+}
+@keyframes anim3ProductComing {
+  from {
+    transform: translateY(-360%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animation3__cursor {
+  position: absolute;
+  top: 88.5%;
+  left: 100%;
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  animation-name: anim3CursorComing;
+  animation-duration: 1s;
+  animation-delay: 14s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim3CursorComing {
+  0% {
+    top: 88.5%;
+    left: 100%;
+  }
+  99% {
+    left: 50%;
+    top: 55.5%;
+
+  }
+  100% {
+    left: 50%;
+    top: 58.5%;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.anim3__link {
+  transform: scale(1);
+
+  animation-name: anim3LinkScaling;
+  animation-duration: 1s;
+  animation-delay: 15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim3LinkScaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animation3__click {
+  position: absolute;
+  left: 52%;
+  top: 59%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transform: translate(-50%, -112.5%);
+  z-index: 10;
+  visibility: hidden;
+
+  animation-name: anim3ClickEffect;
+  animation-duration: 0.2s;
+  animation-delay: 15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim3ClickEffect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
