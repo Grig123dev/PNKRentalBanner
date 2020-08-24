@@ -112,6 +112,7 @@ a {
 .animtaion1__text_par3 {
   overflow: hidden;
   height: 31px;
+  visibility: visible;
 }
 .animtaion1__text_par3 {
   animation-name: anim1Par3Going;
@@ -166,6 +167,8 @@ a {
   }
   to {
     height: 0;
+    visibility: hidden;
+
   }
 }
 @keyframes anim1Par2Going {
@@ -174,6 +177,7 @@ a {
   }
   to {
     height: 0;
+    visibility: hidden;
   }
 }
 @keyframes anim1Par1Going {
@@ -182,6 +186,7 @@ a {
   }
   to {
     height: 0;
+    visibility: hidden;
   }
 }
 
@@ -255,7 +260,7 @@ a {
 
   animation-name: anim3ProductComing;
   animation-duration: 1s;
-  animation-delay: 12s;
+  animation-delay: 11s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -280,7 +285,7 @@ a {
 
   animation-name: anim3AboutComing;
   animation-duration: 1s;
-  animation-delay: 12s;
+  animation-delay: 11s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -322,7 +327,7 @@ a {
 
   animation-name: anim3CursorComing;
   animation-duration: 1s;
-  animation-delay: 14s;
+  animation-delay: 12s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
@@ -351,7 +356,7 @@ a {
 
   animation-name: anim3LinkScaling;
   animation-duration: 1s;
-  animation-delay: 15s;
+  animation-delay: 13s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -381,7 +386,7 @@ a {
 
   animation-name: anim3ClickEffect;
   animation-duration: 0.2s;
-  animation-delay: 15s;
+  animation-delay: 13s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
